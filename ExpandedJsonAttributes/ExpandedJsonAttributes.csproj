@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AssemblyName>ExpandedJsonAttributes</AssemblyName>
+		<AssemblyVersion>1.0.0</AssemblyVersion>
+		<Version>$(AssemblyVersion)</Version>
+		<Authors>Richard Whicker</Authors>
+		<Company>TheDarkOrganism</Company>
+		<Copyright>2024</Copyright>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DebugType>none</DebugType>
+	</PropertyGroup>
+
+</Project>
