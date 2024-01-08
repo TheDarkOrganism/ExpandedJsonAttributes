@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
-		<ImplicitUsings>disable</ImplicitUsings>
+		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<AssemblyName>ExpandedJsonAttributes</AssemblyName>
 		<AssemblyVersion>1.0.0</AssemblyVersion>
@@ -15,5 +15,9 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
 		<DebugType>none</DebugType>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<Using Include="System.ComponentModel.DataAnnotations" />
+	</ItemGroup>
 
 </Project>
