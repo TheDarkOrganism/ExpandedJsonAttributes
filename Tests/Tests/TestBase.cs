@@ -1,6 +1,6 @@
 ﻿namespace Tests.Tests
 {
-	public abstract class TestBase<TAttribute, TModel> : IClassFixture<TestConfig<TAttribute>>
+	public abstract class TestBase<TAttribute, TModel> : TestMinBase, IClassFixture<TestConfig<TAttribute>>
 		where TAttribute : notnull, ValidationAttribute
 		where TModel : notnull
 	{
@@ -16,9 +16,9 @@
 		{
 			_config = config;
 
-			_simpleOptions = TestConfig<TAttribute>.GetSerializerOptions(GetModifier());
+			_simpleOptions = GetSerializerOptions(GetModifier());
 
-			_complexOptions = TestConfig<TAttribute>.GetSerializerOptions(GetPropertyModifier());
+			_complexOptions = GetSerializerOptions(GetPropertyModifier());
 		}
 
 		protected internal abstract Action<JsonTypeInfo> GetModifier();
